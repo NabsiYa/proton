@@ -4,7 +4,10 @@
 #include <psp2/kernel/clib.h>
 #include <psp2/types.h>
 
-#include <vitaGL.h> // GLdouble, etc...
+#include <GLES/gl.h> // GLdouble, etc...
+
+// for some reason PVR headers are missing this.
+typedef double GLdouble;
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846

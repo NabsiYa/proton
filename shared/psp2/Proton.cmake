@@ -255,6 +255,6 @@ function(proton_set_sources)
     endif(PROTON_USE_SDL_AUDIO)
 
     #link required depencies.
-    target_link_libraries(${PROJECT_NAME} -Wl,--whole-archive pthread -Wl,--no-whole-archive vitaGL vitashark SceShaccCg_stub SceShaccCgExt taihen_stub SceGxm_stub SceNet_stub SceNetCtl_stub SceKernelDmacMgr_stub SceDisplay_stub SceCtrl_stub SceAudio_stub SceSysmodule_stub SceCommonDialog_stub SceAppMgr_stub SceHid_stub SceMotion_stub SceIme_stub SceTouch_stub SceAppUtil_stub freetype mathneon m c z bz2)
+    target_link_libraries(${PROJECT_NAME} -Wl,--whole-archive pthread -Wl,--no-whole-archive libgpu_es4_ext_stub libIMGEGL_stub libGLESv1_CM_stub taihen_stub SceGxm_stub SceNet_stub SceNetCtl_stub SceKernelDmacMgr_stub SceDisplay_stub SceCtrl_stub SceAudio_stub SceSysmodule_stub SceCommonDialog_stub SceAppMgr_stub SceHid_stub SceMotion_stub SceIme_stub SceTouch_stub SceAppUtil_stub freetype mathneon m c z bz2)
 
 endfunction(proton_set_sources)

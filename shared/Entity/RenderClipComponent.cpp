@@ -81,9 +81,11 @@ void RenderClipComponent::FilterOnRender(VariantList *pVList)
 		break;
 
 	}
-	
+#ifdef PLATFORM_PSP2
+	glClipPlanef(GL_CLIP_PLANE0, (GLfloat*)planeA.plane);
+#else
 	glClipPlane(GL_CLIP_PLANE0, (GLdouble*) planeA.plane);
-
+#endif
 #endif
 }
 
